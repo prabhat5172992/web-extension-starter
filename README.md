@@ -4,13 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Before running npm install please run npm i -g web-ext to install web-ext
 
-### Folders
+## Folders
 
-# Chrome: greetings-chrome.zip
+### Chrome: greetings-chrome.zip
 
-# Firefox: greetings-1.0.0.zip
+#### Firefox: greetings-1.0.0.zip
 
-### Publishing: Chrome
+#### Publishing: Chrome
 
 1. Go to Google Chrome Developer Dashboard
 2. Sign in with your Google account or create a new one
