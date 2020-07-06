@@ -6,7 +6,7 @@ Before running npm install please run npm i -g web-ext to install web-ext
 
 ## Folders
 
-### Chrome: greetings-chrome.zip
+#### Chrome: greetings-chrome.zip
 
 #### Firefox: greetings-1.0.0.zip
 
