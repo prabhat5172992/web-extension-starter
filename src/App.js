@@ -1,4 +1,5 @@
 import React from "react";
+import { tConvert } from "./helper";
 
 const greetings = {
   morning: "Good morning",
@@ -36,10 +37,25 @@ class App extends React.Component {
     setTimeout(this.startTime, 1000);
   }
 
+  displayTime() {
+    const dateValue = Date().split("GMT")[0].trim();
+    const [d1, d2] = dateValue.split(new Date().getUTCFullYear());
+    return (
+      <h3>
+        {d1.trim()} {tConvert(d2.trim())}
+      </h3>
+    );
+  }
+
   render() {
     return (
       <div className="App">
-        <h1>{this.state.greeting}</h1>
+        <div>
+          <div>
+            <h1>{this.state.greeting}</h1>
+          </div>
+          <div>{this.displayTime()}</div>
+        </div>
       </div>
     );
   }

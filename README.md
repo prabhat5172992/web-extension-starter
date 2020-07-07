@@ -28,3 +28,7 @@ Before running npm install please run npm i -g web-ext to install web-ext
 5. Add the greetings-1.0.0.zip file created in the previous step
 6. Fill up the required details and submit for review
    (Usually takes around 6-10 mins to publish)
+
+### Note:
+
+Go to https://developer.chrome.com/extensions/manifest this link to get manifest file format.

@@ -1,13 +1,15 @@
-//const { execSync } = require("child_process");
-//var zip = require("file-zip");
 const { execSync } = require("child_process");
 const fs = require("fs");
-const Zip = require("./createZip");
-const jsonReader = require("./jsonReader");
+const path = require("path");
+const { Zip } = require("./helper");
+const { jsonReader } = require("./helper");
+const { getDir } = require("./helper");
 
+const directoryPath = path.join(__dirname, "src/img");
 // FILENAMES
 const manifestFileName = "manifest.json";
-const img = "greet.png";
+const img = getDir(directoryPath);
+// const img = "greet.png";
 
 // DIRECTORIES
 const buildDir = "./build/";
@@ -28,7 +30,7 @@ execSync(`cp ${imagePath}${img} ${buildDir}${img}`);
 
 console.log("***IMAGE COPIED SUCCESSFULLY***");
 
-if (fs.existsSync(buildDir)) {
+if (fs.existsSync(buildDir) && `${buildDir}${manifestFileName}`) {
   jsonReader(`${buildDir}${manifestFileName}`, (err, manifest) => {
     if (err) {
       console.log("Error reading file:", err);
